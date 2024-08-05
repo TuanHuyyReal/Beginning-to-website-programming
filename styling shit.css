@@ -1,0 +1,16 @@
+.introducing {
+    size: 20;
+    color: rgb(145, 158, 214);
+    text-decoration: bold;
+    padding: 10px 0;
+    }
+.infos {
+    size: 18;
+    border: rgb(3, 3, 3) 200px;
+    }
+#name {
+    color: blue;
+    }
+#social-medias {
+    color: rgb(132, 200, 231);
+    }
