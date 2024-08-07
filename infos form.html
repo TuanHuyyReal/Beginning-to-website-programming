@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Information input form</title>
+    <body>
+        <!-- Write code below this line -->
+        <form action="https://jsonplaceholder.typicode.com/todos" method="POST" id="practiceForm">
+            <label for="firstName" id="firstNameLabel" >First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter Your First Name..."><br>
+            <label for="lastName" id="lastNameLabel">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter Your Last Name..."><br>
+            <label for="email" id="emailLabel">Your Email:</lable>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email"><br>
+            <label for="age" id="ageLabel">Your Age:</label>
+                <input type="number"  min="0" id="age" name="age" placeholder="Your Age"><br>
+            Your Gender: <Br>
+            <label for="male" id="maleLabel">Male</label>
+                <input type="radio" id="male" name="gender">
+            <label for="female" id="femaleLabel"> Female </label>
+                <input type="radio" id="female" name="gender"><br>
+            <label for="satisfaction" id="satisfactionLabel">Your satisfaction about our product</label><br>
+                <input type="range" min="0" max="100" id="satisfaction" name="satisfaction">
+            <label for="submit" id="submitLabel"></label><br>
+                <input type="submit" id="submit" name="submit">
+    </body>
+</html>
