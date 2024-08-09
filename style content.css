@@ -1,0 +1,8 @@
+body {
+    font-family: cursive 16;
+}
+h1,h2,h3 {
+    font: 20 white;
+    background: rgb(13, 99, 139);
+    position: sticky;
+}
