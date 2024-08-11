@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>5 Star Feedback</title>
+<style>
+body{display:flex;justify-content:center;align-items:center;height:100vh;margin:0;font-family:Arial,sans-serif;background-color:#121212;color:#e0e0e0}
+.container{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background-color:#333;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.3);padding:1rem;max-width:10rem;min-height:8rem;width:100%}
+.star-rating{display:flex;font-size:1.5rem;color:#fff;cursor:pointer;margin-bottom:0.5rem}
+.star-rating .star{margin:0 0.1rem;transition:color 0.3s}
+.star-rating .star:hover,.star-rating .star.hover{color:gold}
+.feedback{font-size:0.9rem;color:#fff;display:flex;flex-direction:column;align-items:center}
+.feedback span{font-size:2rem}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="star-rating">
+<span class="star" data-value="1">&#9733;</span>
+<span class="star" data-value="2">&#9733;</span>
+<span class="star" data-value="3">&#9733;</span>
+<span class="star" data-value="4">&#9733;</span>
+<span class="star" data-value="5">&#9733;</span>
+</div>
+<div class="feedback">
+<div id="feedback-text">Hover over the stars to see feedback.</div>
+<span id="feedback-emoji" style="display:none">⭐</span>
+</div>
+</div>
+<script>
+const stars=document.querySelectorAll('.star');
+const feedbackText=document.getElementById('feedback-text');
+const feedbackEmoji=document.getElementById('feedback-emoji');
+stars.forEach(star=>{
+star.addEventListener('mouseover',()=>handleHover(star.dataset.value));
+star.addEventListener('mouseout',resetFeedback);
+});
+function handleHover(value){
+stars.forEach(star=>star.dataset.value<=value?star.classList.add('hover'):star.classList.remove('hover'));
+const feedbacks=['Very Poor','Poor','Good','Very Good','Excellent'];
+const emojis=['😞','😟','🙂','😊','😁'];
+feedbackText.textContent=feedbacks[parseInt(value)-1];
+feedbackEmoji.textContent=emojis[parseInt(value)-1];
+feedbackEmoji.style.display='inline';
+}
+function resetFeedback(){
+stars.forEach(star=>star.classList.remove('hover'));
+feedbackText.textContent='Hover over the stars to see feedback.';
+feedbackEmoji.style.display='none';
+}
+</script>
+</body>
+</html>
