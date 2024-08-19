@@ -25,6 +25,8 @@
             left: 50%;
             transform: translate(-50%, 0);
             background-color: #336371;
+            animation: Slidefromtop 0.5s ease-out ;
+            transform: translateX(0);
         }
         .navigation ul{
             display: flex;
@@ -54,24 +56,42 @@
         img{
             height: 20px;
         }
+        @keyframes Slidefromleft {
+            from{
+                transform: translateX(-100%);
+            }
+            to{
+                transform: translateX(0) ;
+            }
+        }
+        @keyframes Slidefromtop {
+            from{
+                transform: translateY(-100%)
+                
+                
+            }
+            to{
+                transform: translateY(0);
+            }
+        }
     </style>
     <link rel="image" href="chat.png">
     <link rel="image" href="home.png">
     <link rel="image" href="user.png">
     <link rel="image" href="layout.png">
     <link rel="image" href="online-shopping.png">
+    
 </head>
 <body>
     <div id="main-container">
         <nav class="navigation">
             <ul title="Navigation Bar">
-                <li title="Home"><img src="home.png"> </li>
+                <li id="Home" title="Home"><a href="TNB HOME.html"><img src="home.png"> </a></li>
                 <li title="User"><img src="user.png"></li>
-                <li title="Dashboard"><img src="layout.png"></li>
-                <li title="Chats"><img src="chat.png"></li>
-                <li title="Cart"><img src="online-shopping.png"></li>
+                <li title="Gallery"><img src="layout.png"></li>
+                <li title="Contact"><img src="chat.png"></li>
+                <li title="Cart"><a href="TNB Carts.html"><img src="online-shopping.png"></li></a>
                 </ul>
-        </nav>
     </div>
 </body>
 </html>
